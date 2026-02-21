@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trace Nearby Communication</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32.png">
+  <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+  <style>
+    :root {
+      --bg: #C8C3B8;
+      --surface: #E8E4DC;
+      --accent: #A8B5A0;
+      --pulse: #E0C9A6;
+      --text: #4A4640;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
+      font-weight: 300;
+      line-height: 1.82;
+      color: var(--text);
+      background: var(--bg);
+    }
+    main {
+      width: min(900px, 92vw);
+      margin: 0 auto;
+      padding: 2.4rem 0 4rem;
+    }
+    h1, h2 {
+      margin: 0;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+    }
+    h1 {
+      font-size: clamp(1.8rem, 5.8vw, 2.5rem);
+      margin-bottom: 0.7rem;
+    }
+    .lead {
+      margin: 0 0 1.7rem;
+      max-width: 52ch;
+      opacity: 0.9;
+    }
+    .box {
+      background: var(--surface);
+      border: 1px solid rgba(74, 70, 64, 0.13);
+      border-radius: 1.1rem;
+      padding: clamp(1.2rem, 4vw, 2rem);
+      margin-bottom: 1rem;
+    }
+    .box h2 {
+      font-size: 1.02rem;
+      margin-bottom: 0.45rem;
+    }
+    .box p { margin: 0; }
+    nav {
+      margin-top: 1.8rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(74, 70, 64, 0.2);
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+    a {
+      color: inherit;
+      text-underline-offset: 0.2rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="lead"><a href="../../nearby/index.html">日本語</a> / <a href="./index.html" lang="en">EN</a></p>
+    <h1>Nearby Communication</h1>
+    <p class="lead">
+      Trace hands off notes only between devices that are physically nearby.
+      It is a quiet, proximity-based synchronization model.
+    </p>
+
+    <section class="box">
+      <h2>1. Communication Technologies</h2>
+      <p>Trace uses Bluetooth and Local Network (AWDL) for direct device-to-device communication.</p>
+    </section>
+
+    <section class="box">
+      <h2>2. Purpose</h2>
+      <p>The purpose is to synchronize Trace data directly between users in the same place.</p>
+    </section>
+
+    <section class="box">
+      <h2>3. Typical Range</h2>
+      <p>The practical communication range is typically within several tens of meters, depending on conditions.</p>
+    </section>
+
+    <section class="box">
+      <h2>4. No External Server</h2>
+      <p>Synchronization is fully peer-to-peer and never routed through external servers.</p>
+    </section>
+
+    <section class="box">
+      <h2>5. Collected Data</h2>
+      <p>No personal information is collected. Only diff-based Trace packet synchronization is exchanged.</p>
+    </section>
+
+    <nav aria-label="Page navigation">
+      <a href="../index.html">Home</a>
+      <a href="../privacy/index.html">Privacy Policy</a>
+      <a href="./index.html">Nearby Communication</a>
+    </nav>
+  </main>
+</body>
+</html>

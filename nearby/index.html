@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trace 近距離通信について</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <style>
+    :root {
+      --bg: #C8C3B8;
+      --surface: #E8E4DC;
+      --accent: #A8B5A0;
+      --pulse: #E0C9A6;
+      --text: #4A4640;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
+      font-weight: 300;
+      line-height: 1.82;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    main {
+      width: min(900px, 92vw);
+      margin: 0 auto;
+      padding: 2.4rem 0 4rem;
+    }
+
+    h1, h2 {
+      margin: 0;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+    }
+
+    h1 {
+      font-size: clamp(1.8rem, 5.8vw, 2.5rem);
+      margin-bottom: 0.7rem;
+    }
+
+    .lead {
+      margin: 0 0 1.7rem;
+      max-width: 50ch;
+      opacity: 0.9;
+    }
+
+    .box {
+      background: var(--surface);
+      border: 1px solid rgba(74, 70, 64, 0.13);
+      border-radius: 1.1rem;
+      padding: clamp(1.2rem, 4vw, 2rem);
+      margin-bottom: 1rem;
+    }
+
+    .box h2 {
+      font-size: 1.02rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .box p {
+      margin: 0;
+    }
+
+    nav {
+      margin-top: 1.8rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(74, 70, 64, 0.2);
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    a {
+      color: inherit;
+      text-underline-offset: 0.2rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="lead"><a href="../index.html">日本語</a> / <a href="../en/nearby/index.html" lang="en">英語</a></p>
+    <h1>近距離通信について</h1>
+    <p class="lead">
+      Traceは、同じ場所を通る人どうしの端末間でだけ、言葉を手渡しします。<br>
+      近さだけを使う、静かな同期です。
+    </p>
+
+    <section class="box">
+      <h2>1. 使用する通信</h2>
+      <p>TraceはBluetoothとローカルネットワーク（AWDL）を用いて、近接した端末間の直接通信を行います。</p>
+    </section>
+
+    <section class="box">
+      <h2>2. 目的</h2>
+      <p>目的は、同じ場所にいるユーザーの端末間でTraceを直接同期することです。</p>
+    </section>
+
+    <section class="box">
+      <h2>3. 通信範囲の目安</h2>
+      <p>通信範囲の目安は数十メートル以内です（環境や障害物により変動します）。</p>
+    </section>
+
+    <section class="box">
+      <h2>4. サーバー非経由</h2>
+      <p>同期は端末間で完結し、外部サーバーを一切経由しません。</p>
+    </section>
+
+    <section class="box">
+      <h2>5. 収集する情報</h2>
+      <p>収集する個人情報はありません。通信はTraceパケットの差分同期のみです。</p>
+    </section>
+
+    <nav aria-label="ページ移動">
+      <a href="../index.html">ホーム</a>
+      <a href="../privacy/index.html">プライバシーポリシー</a>
+      <a href="./index.html">近距離通信について</a>
+    </nav>
+  </main>
+</body>
+</html>

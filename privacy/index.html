@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trace プライバシーポリシー</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <style>
+    :root {
+      --bg: #C8C3B8;
+      --surface: #E8E4DC;
+      --accent: #A8B5A0;
+      --pulse: #E0C9A6;
+      --text: #4A4640;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    main {
+      width: min(900px, 92vw);
+      margin: 0 auto;
+      padding: 2.4rem 0 3.8rem;
+    }
+
+    h1, h2 {
+      margin: 0;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+    }
+
+    h1 {
+      font-size: clamp(1.8rem, 5.8vw, 2.5rem);
+      margin-bottom: 0.45rem;
+    }
+
+    .meta {
+      margin: 0 0 1.5rem;
+      opacity: 0.8;
+      font-size: 0.95rem;
+    }
+
+    .panel {
+      background: var(--surface);
+      border: 1px solid rgba(74, 70, 64, 0.13);
+      border-radius: 1.1rem;
+      padding: clamp(1.2rem, 4vw, 2rem);
+      margin-bottom: 1rem;
+    }
+
+    .panel h2 {
+      font-size: 1.03rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .panel p {
+      margin: 0;
+    }
+
+    nav {
+      margin-top: 1.8rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(74, 70, 64, 0.2);
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    a {
+      color: inherit;
+      text-underline-offset: 0.2rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="meta"><a href="../index.html">日本語</a> / <a href="../en/privacy/index.html" lang="en">英語</a></p>
+    <h1>プライバシーポリシー</h1>
+    <p class="meta">Trace / 最終更新日: 2026-02-21</p>
+
+    <section class="panel">
+      <h2>1. 位置情報</h2>
+      <p>Traceは位置情報を端末内でのみ処理し、外部サーバーへ送信しません。</p>
+    </section>
+
+    <section class="panel">
+      <h2>2. 近距離通信（Bluetooth・ローカルネットワーク）</h2>
+      <p>近くのデバイスとの直接通信のために、Bluetoothとローカルネットワークを使用します。通信は端末間で完結し、外部サーバーを経由しません。</p>
+    </section>
+
+    <section class="panel">
+      <h2>3. 個人情報</h2>
+      <p>氏名・メールアドレス・電話番号などの個人情報を収集、保存、共有しません。</p>
+    </section>
+
+    <section class="panel">
+      <h2>4. お問い合わせ</h2>
+      <p>お問い合わせ: contact@example.com</p>
+    </section>
+
+    <nav aria-label="ページ移動">
+      <a href="../index.html">ホーム</a>
+      <a href="./index.html">プライバシーポリシー</a>
+      <a href="../nearby/index.html">近距離通信について</a>
+    </nav>
+  </main>
+</body>
+</html>

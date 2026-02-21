@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trace</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <style>
+    :root {
+      --bg: #c8c3b8;
+      --surface: #cec9be;
+      --line: rgba(74, 70, 64, 0.12);
+      --pulse: #d9c3a1;
+      --text: #4a4640;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 2;
+      color: var(--text);
+      background: var(--bg);
+      letter-spacing: 0.01em;
+    }
+
+    main {
+      width: min(920px, 92vw);
+      margin: 0 auto;
+      padding: 2.2rem 0 3.2rem;
+    }
+
+    .lang {
+      font-size: 0.85rem;
+      opacity: 0.84;
+      margin: 0 0 1.7rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.1rem;
+      align-items: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.2rem, 8vw, 4.2rem);
+      font-weight: 400;
+      letter-spacing: 0.02em;
+    }
+
+    .copy {
+      margin: 0.5rem 0 0;
+      font-size: clamp(1.35rem, 3.4vw, 1.9rem);
+      line-height: 1.9;
+      opacity: 0.94;
+    }
+
+    .app-icon-wrap {
+      width: 172px;
+      border-radius: 38px;
+      overflow: hidden;
+      justify-self: start;
+    }
+
+    .app-icon {
+      width: 100%;
+      display: block;
+      border-radius: 38px;
+      clip-path: inset(0 round 38px);
+    }
+
+    .section {
+      margin-top: 2.2rem;
+      padding: 1.5rem 1.4rem;
+      background: color-mix(in srgb, var(--surface) 92%, var(--bg));
+      border: 1px solid var(--line);
+      border-radius: 1.1rem;
+    }
+
+    .section p {
+      margin: 0;
+      max-width: 26ch;
+    }
+
+    .cards {
+      margin-top: 1.8rem;
+      display: grid;
+      gap: 0.7rem;
+    }
+
+    .card {
+      padding: 1.05rem 1.1rem;
+      background: color-mix(in srgb, var(--surface) 88%, var(--bg));
+      border: 1px solid rgba(74, 70, 64, 0.1);
+      border-radius: 0.95rem;
+    }
+
+    .card h2 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+    }
+
+    .card p {
+      margin: 0.18rem 0 0;
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
+    .echo {
+      margin-top: 1.9rem;
+      padding: 0.4rem 0.2rem;
+      font-size: 1.05rem;
+      opacity: 0.88;
+    }
+
+    .cta {
+      margin-top: 1.7rem;
+    }
+
+    .button {
+      display: inline-block;
+      text-decoration: none;
+      font-size: 0.95rem;
+      color: var(--text);
+      background: color-mix(in srgb, var(--pulse) 50%, var(--bg));
+      border: 1px solid rgba(74, 70, 64, 0.15);
+      border-radius: 999px;
+      padding: 0.78rem 1.25rem;
+    }
+
+    footer {
+      margin-top: 2.1rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(74, 70, 64, 0.14);
+      display: flex;
+      gap: 1.1rem;
+      flex-wrap: wrap;
+      font-size: 0.82rem;
+      opacity: 0.9;
+    }
+
+    a {
+      color: inherit;
+      text-underline-offset: 0.2rem;
+    }
+
+    @media (min-width: 760px) {
+      .hero {
+        grid-template-columns: minmax(270px, 360px) 172px;
+        gap: 0.72rem;
+      }
+
+      .app-icon-wrap {
+        margin-top: 16px;
+      }
+
+      .cards {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="lang"><a href="../index.html">日本語</a> / <a href="./index.html" lang="en">EN</a></p>
+
+    <section class="hero" aria-label="Hero">
+      <div>
+        <h1>Trace</h1>
+        <p class="copy">People carry it.<br>Places remember.</p>
+      </div>
+      <div class="app-icon-wrap">
+        <img class="app-icon" src="../icon.png" alt="Trace app icon">
+      </div>
+    </section>
+
+    <section class="section" aria-label="Concept">
+      <p>
+        A note is left.<br>
+        It moves with footsteps.<br>
+        Then fades.
+      </p>
+    </section>
+
+    <section class="cards" aria-label="Features">
+      <article class="card">
+        <h2>Drop</h2>
+        <p>Press. Hold. Leave.</p>
+      </article>
+      <article class="card">
+        <h2>Carry</h2>
+        <p>People carry it.</p>
+      </article>
+      <article class="card">
+        <h2>Meet Quietly</h2>
+        <p>Only a soft pulse.</p>
+      </article>
+    </section>
+
+    <section class="echo" aria-label="Echo">
+      A faint presence.<br>
+      Nothing more.
+    </section>
+
+    <section class="cta" aria-label="Download">
+      <a class="button" href="#" aria-label="Download on the App Store">Open on the App Store</a>
+    </section>
+
+    <footer>
+      <a href="./privacy/index.html">Privacy Policy</a>
+      <a href="./nearby/index.html">Nearby Communication</a>
+    </footer>
+  </main>
+</body>
+</html>
