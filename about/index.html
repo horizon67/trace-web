@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trace について</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <style>
+    :root {
+      --bg: #c8c3b8;
+      --surface: #cec9be;
+      --line: rgba(74, 70, 64, 0.12);
+      --text: #4a4640;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 1.95;
+      color: var(--text);
+      background: var(--bg);
+      letter-spacing: 0.01em;
+    }
+
+    main {
+      width: min(920px, 92vw);
+      margin: 0 auto;
+      padding: 2.1rem 0 3.1rem;
+    }
+
+    h1 {
+      margin: 0 0 1.1rem;
+      font-size: clamp(2rem, 7vw, 3.2rem);
+      font-weight: 400;
+      letter-spacing: 0.02em;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(1.1rem, 3.6vw, 1.35rem);
+      font-weight: 400;
+      letter-spacing: 0.02em;
+    }
+
+    .lead {
+      margin: 0;
+      max-width: 32ch;
+    }
+
+    .section {
+      margin-top: 1.45rem;
+      padding: 1.25rem 1.15rem;
+      background: color-mix(in srgb, var(--surface) 92%, var(--bg));
+      border: 1px solid var(--line);
+      border-radius: 1rem;
+    }
+
+    .section p {
+      margin: 0.62rem 0 0;
+      max-width: 40ch;
+    }
+
+    .grid {
+      margin-top: 0.75rem;
+      display: grid;
+      gap: 0.6rem;
+    }
+
+    .card {
+      padding: 0.95rem 0.95rem;
+      border: 1px solid rgba(74, 70, 64, 0.1);
+      border-radius: 0.85rem;
+      background: color-mix(in srgb, var(--surface) 87%, var(--bg));
+    }
+
+    .card p { margin: 0.42rem 0 0; }
+
+    ul {
+      margin: 0.62rem 0 0;
+      padding-left: 1.1rem;
+    }
+
+    li { margin: 0.24rem 0; }
+
+    .end {
+      margin-top: 1.7rem;
+      font-size: 1.08rem;
+    }
+
+    nav {
+      margin-top: 1.9rem;
+      padding-top: 0.95rem;
+      border-top: 1px solid rgba(74, 70, 64, 0.14);
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-size: 0.84rem;
+    }
+
+    a {
+      color: inherit;
+      text-underline-offset: 0.2rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Trace とは</h1>
+    <p class="lead">
+      Traceは、人の移動で情報が伝わる空間知アプリです。<br>
+      中央サーバーを使わず、近くの端末どうしで同期されます。<br>
+      通知も地図もありません。
+    </p>
+
+    <section class="section">
+      <h2>どんなことに使えるか</h2>
+      <div class="grid">
+        <article class="card">
+          <h2>日常の小さな共有</h2>
+          <p>
+            「この階段は滑りやすい」<br>
+            「この時間は混む」<br>
+            「ここに静かなベンチがある」<br>
+            今そこにいる人にだけ届く情報です。
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>場所にメモを残す</h2>
+          <p>
+            駅、公園、カフェ、建物の入口。<br>
+            場所そのものに短い言葉を置く感覚です。
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>災害や通信不安定な環境で</h2>
+          <p>
+            インターネットがなくても、近くの人どうしですれ違い通信が行われます。<br>
+            完全オフラインで動作します。
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>イベントや人が多い場所で</h2>
+          <p>
+            フェス、展示会、地下街など。<br>
+            リアルタイムではなく、時間差で伝わる情報に向いています。
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>例：ある言葉の旅</h2>
+      <p>
+        Aさんが旅先で、短い言葉を置きます。<br>
+        「このあたり、夕方になると風が気持ちいい」<br>
+        その言葉はインターネットへは送られず、近くの端末に直接コピーされます。
+      </p>
+      <p>
+        BさんがAさんとすれ違うと、会話がなくても言葉はBさんの端末へ移ります。<br>
+        Bさんが別の場所へ移動している間、言葉は持ち運ばれますが表示はされません。
+      </p>
+      <p>
+        後日、CさんがBさんとすれ違い、同じ言葉を受け取ります。<br>
+        そしてCさんが元の街へ戻ったとき、はじめてその言葉が画面に現れます。
+      </p>
+      <p>
+        この流れで大切なのは、<br>
+        人と一緒に移動すること。<br>
+        置かれた場所の近くでだけ表示されること。<br>
+        誰が書いたか分からないこと。<br>
+        中央サーバーがないこと。<br>
+        インターネットがなくても伝わることです。
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Trace が向いていないこと</h2>
+      <ul>
+        <li>大人数への一斉配信</li>
+        <li>永続的な投稿</li>
+        <li>SNS的な交流</li>
+        <li>写真や長文</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Trace の特徴</h2>
+      <ul>
+        <li>短文のみ</li>
+        <li>24〜72時間で消える</li>
+        <li>アカウント不要</li>
+        <li>サーバーなし</li>
+        <li>匿名</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>プライバシーについて</h2>
+      <ul>
+        <li>位置情報は端末内のみ</li>
+        <li>サーバーに送信しない</li>
+        <li>個人情報を収集しない</li>
+      </ul>
+      <p>詳細は <a href="../privacy/index.html">Privacy Policy</a> をご確認ください。</p>
+    </section>
+
+    <p class="end">Trace は、場所の気配を共有するための、静かな道具です。</p>
+
+    <nav aria-label="ページ移動">
+      <a href="../index.html">ホーム</a>
+      <a href="./index.html">どう使うか</a>
+      <a href="../privacy/index.html">プライバシーポリシー</a>
+      <a href="../nearby/index.html">近距離通信について</a>
+    </nav>
+  </main>
+</body>
+</html>

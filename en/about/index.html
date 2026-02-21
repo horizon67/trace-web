@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Trace</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32.png">
+  <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+  <style>
+    :root {
+      --bg: #c8c3b8;
+      --surface: #cec9be;
+      --line: rgba(74, 70, 64, 0.12);
+      --text: #4a4640;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 1.95;
+      color: var(--text);
+      background: var(--bg);
+      letter-spacing: 0.01em;
+    }
+
+    main {
+      width: min(920px, 92vw);
+      margin: 0 auto;
+      padding: 2.1rem 0 3.1rem;
+    }
+
+    h1 {
+      margin: 0 0 1.1rem;
+      font-size: clamp(2rem, 7vw, 3.2rem);
+      font-weight: 400;
+      letter-spacing: 0.02em;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(1.1rem, 3.6vw, 1.35rem);
+      font-weight: 400;
+      letter-spacing: 0.02em;
+    }
+
+    .lead {
+      margin: 0;
+      max-width: 34ch;
+    }
+
+    .section {
+      margin-top: 1.45rem;
+      padding: 1.25rem 1.15rem;
+      background: color-mix(in srgb, var(--surface) 92%, var(--bg));
+      border: 1px solid var(--line);
+      border-radius: 1rem;
+    }
+
+    .section p {
+      margin: 0.62rem 0 0;
+      max-width: 42ch;
+    }
+
+    .grid {
+      margin-top: 0.75rem;
+      display: grid;
+      gap: 0.6rem;
+    }
+
+    .card {
+      padding: 0.95rem 0.95rem;
+      border: 1px solid rgba(74, 70, 64, 0.1);
+      border-radius: 0.85rem;
+      background: color-mix(in srgb, var(--surface) 87%, var(--bg));
+    }
+
+    .card p { margin: 0.42rem 0 0; }
+
+    ul {
+      margin: 0.62rem 0 0;
+      padding-left: 1.1rem;
+    }
+
+    li { margin: 0.24rem 0; }
+
+    .end {
+      margin-top: 1.7rem;
+      font-size: 1.08rem;
+    }
+
+    nav {
+      margin-top: 1.9rem;
+      padding-top: 0.95rem;
+      border-top: 1px solid rgba(74, 70, 64, 0.14);
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-size: 0.84rem;
+    }
+
+    a {
+      color: inherit;
+      text-underline-offset: 0.2rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>What Trace Is</h1>
+    <p class="lead">
+      Trace is a place-based app where information moves through people.<br>
+      There is no central server. Nearby devices sync directly.<br>
+      No notifications. No map.
+    </p>
+
+    <section class="section">
+      <h2>What It Can Be Used For</h2>
+      <div class="grid">
+        <article class="card">
+          <h2>Small Everyday Sharing</h2>
+          <p>
+            “These stairs get slippery.”<br>
+            “This area gets crowded around this time.”<br>
+            “There is a quiet bench here.”<br>
+            Information for people who are there now.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>Leaving Notes on Places</h2>
+          <p>
+            Stations, parks, cafes, building entrances.<br>
+            A short line left for a place itself.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>During Disasters or Unstable Connectivity</h2>
+          <p>
+            Even without internet, nearby devices can exchange data by passing each other.<br>
+            It works fully offline.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>At Events or Crowded Areas</h2>
+          <p>
+            Festivals, exhibitions, underground malls.<br>
+            Not real-time, but useful as delayed local information.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Example: How a Line Travels</h2>
+      <p>
+        Person A leaves a short line while traveling.<br>
+        “The evening wind feels good around here.”<br>
+        It is not sent to the internet. It is copied directly to nearby devices.
+      </p>
+      <p>
+        Person B passes A. Without conversation, the line moves to B's phone.<br>
+        While B is away from the original place, the line is carried but not shown.
+      </p>
+      <p>
+        Later, Person C passes B and receives the same line.<br>
+        Days later, when C returns to that place, the line appears for the first time.
+      </p>
+      <p>
+        Key points:<br>
+        Lines move with people.<br>
+        They appear only near where they were placed.<br>
+        The author is not shown.<br>
+        There is no central server.<br>
+        It can work without internet.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>What Trace Is Not For</h2>
+      <ul>
+        <li>Broadcasting to large audiences</li>
+        <li>Permanent posts</li>
+        <li>SNS-style interaction</li>
+        <li>Photos or long-form writing</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Core Characteristics</h2>
+      <ul>
+        <li>Short text only</li>
+        <li>Disappears in 24-72 hours</li>
+        <li>No account required</li>
+        <li>No server</li>
+        <li>Anonymous</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Privacy (Brief)</h2>
+      <ul>
+        <li>Location data stays on-device side</li>
+        <li>Not sent to a central server</li>
+        <li>No personal information collected</li>
+      </ul>
+      <p>See <a href="../privacy/index.html">Privacy Policy</a> for details.</p>
+    </section>
+
+    <p class="end">Trace is a quiet tool for sharing the presence of a place.</p>
+
+    <nav aria-label="Page navigation">
+      <a href="../index.html">Home</a>
+      <a href="./index.html">How to Use</a>
+      <a href="../privacy/index.html">Privacy Policy</a>
+      <a href="../nearby/index.html">Nearby Communication</a>
+    </nav>
+  </main>
+</body>
+</html>
